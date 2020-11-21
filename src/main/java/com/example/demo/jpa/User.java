@@ -20,7 +20,7 @@ public class User {
     private String name;
     @Column(name ="UserEmail")
     private String email;
-    @Enumerated(EnumType.STRING) //enum 을 적용시키는데 저장할때 문자열로 저장한다.
+    @Enumerated(EnumType.STRING) //enum 을 적용시키는데 저장할때 문자열로 저장한다. EnumType을 지정하지않으면 기본으로 인덱스값으로 들어가니 주의 필요!
     private MemberType memberType;
 
     @Builder

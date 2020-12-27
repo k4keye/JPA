@@ -1,0 +1,21 @@
+spring:
+  h2:
+    console:
+      enabled: true  # H2 웹 콘솔을 사용하겠다는 의미
+
+  datasource: #데이터베이스 접속할 정보
+    url: jdbc:h2:mem:testdb # jdbc:h2:tcp://localhost/~/datajpa
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+
+  jpa:
+    hidernate:
+      ddl-auto : create #어플리케이션 로딩시 테이블을 모두 드랍하고 클린한 상태로 생성
+
+    properties:
+      hidernate:
+        format_sql: true  #쿼리를 한줄로 나오지말고 포맷팅해서 출력
+
+logging.level:
+  org.hibernate.SQL: debug #JPA 가 실행하는 쿼리를 로그로 저장

@@ -19,3 +19,4 @@ spring:
 
 logging.level:
   org.hibernate.SQL: debug #JPA 가 실행하는 쿼리를 로그로 저장
+  #org.hibernate.type: trace
